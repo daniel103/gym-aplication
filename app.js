@@ -15,7 +15,10 @@ app.use(express.json())
 
 app.use('/user', require('./Routes/users'))
 
+// app.get("/",(req, res) => {
+//     res.send("hey")
+// })
 app.listen(PORT, () => {
-    console.log(`running on port http://localhost:${PORT}`)
+    console.log(`running on port ${PORT}`)
 })
 
