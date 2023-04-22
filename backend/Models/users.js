@@ -13,6 +13,10 @@ const userSchema = new Schema ({
         type: String,
         required: [true, "Please enter your userName"]
     },
+    email: {
+        type: String,
+        required: [true, "Please enter your email"]
+    },
     password: {
         type: String,
         required: [true, "please enter your password"],
