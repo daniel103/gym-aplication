@@ -1,10 +1,24 @@
-require("dotenv").config();
-const express = require("express");
-const app = express();
-const MongoDB = require("./MongoDB/MongoDB");
-
-MongoDB();
-
+require('dotenv').config();
+const express = require('express');
+const app = express()
 const PORT = process.env.PORT || 5000;
+// const mongoose = require('./MongoDB/MongoDB');
+const {connectDB} = require('./MongoDB/MongoDB')
+const cookieParser = require('cookie-parser');
+const path = require('path');
 
-app.listen(PORT , () => console.log(`app on PORT ${PORT}`));
+app.use(cookieParser())
+
+// mongoose();
+connectDB()
+app.use(express.json())
+
+app.use('/user', require('./Routes/users'))
+
+// app.get("/",(req, res) => {
+//     res.send("hey")
+// })
+app.listen(PORT, () => {
+    console.log(`running on port ${PORT}`)
+})
+
