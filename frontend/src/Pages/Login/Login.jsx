@@ -1,8 +1,12 @@
+import './Login.css';
 import {useState, React} from 'react';
 import {Button, TextField} from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import {useForm} from 'react-hook-form';
-import axios from "axios"
+import axios from "axios";
+import CssBaseline from '@mui/material/CssBaseline';
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
 
 
 const Login = () => {
@@ -33,9 +37,12 @@ const Login = () => {
   }
 
   return (
-    <div>
+    <div className='Login-page'>
+      <Container maxWidth="sm">
+        <Box className="Sign-in">
+        <div>
+        <form action="GET" onSubmit={() => onSubmit(user)} className='form-container'><br />
         <h1>Sign In</h1>
-        <form action="GET" onSubmit={() => onSubmit(user)}><br />
         <TextField
         onChange={handleInputChange}
         id="outlined-password-input"
@@ -50,9 +57,12 @@ const Login = () => {
         type="text"
         autoComplete="current-password"
         /><br/>
-            <Button color="primary" variant="contained">Sing in</Button>
+            <Button color="primary" variant="contained">Sing in</Button><br />
         </form>
             <Button color="success" variant="outlined">Register</Button>
+          </div>
+      </Box>
+      </Container>
     </div>
   )
 }

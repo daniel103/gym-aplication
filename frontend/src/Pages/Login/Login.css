@@ -1,0 +1,27 @@
+body {
+    display: block;
+    background-attachment: fixed;
+     background-size: cover;
+    background-image: url("https://www.healthdigest.com/img/gallery/the-worst-time-of-the-day-to-go-to-the-gym/intro-1634673488.jpg");
+}
+
+
+.Login-page{
+    padding: 90px;
+}
+
+.Sign-in{
+    background-color: darkgrey;
+    border-radius: 15px;
+    height: 400px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
