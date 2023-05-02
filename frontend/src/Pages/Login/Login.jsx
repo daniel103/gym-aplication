@@ -18,7 +18,7 @@ const Login = () => {
 
   const handleInputChange = (e) => {
     setFormValue((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
+  }
 
   const onSubmit = async (user) => {
     try {
@@ -57,9 +57,9 @@ const Login = () => {
         type="text"
         autoComplete="current-password"
         /><br/>
-            <Button color="primary" variant="contained">Sing in</Button><br />
+            <Button type='submit' color="primary" variant="contained">Sing in</Button><br />
         </form>
-            <Button color="success" variant="outlined">Register</Button>
+            <Button color="success" variant="outlined" onClick={() => navigate("/register")}>Register</Button>
           </div>
       </Box>
       </Container>

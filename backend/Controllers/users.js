@@ -21,9 +21,10 @@ exports.register = () =>
         const jwtToken = token(user._doc)
         res.cookie('token', jwtToken)
         res.status(200).send({
-            success: 'success', data: jwtToken
+            success: 'success', data: user
         })
 })
+
 
 exports.login = () => 
    catchAsync(async (req, res, next) => {
