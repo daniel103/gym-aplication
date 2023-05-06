@@ -22,7 +22,7 @@ const Register = () => {
   const onSubmit = async (data) => {
     try {
       reset();
-      const res = await axios.post(`${process.env.REACT_APP_API_URL}/user/register`, data)
+      const res = await axios.post(`${process.env.REACT_APP_API_URL}/user/`, data)
       navigate("/login");
     } catch (error) {
       console.log(error);

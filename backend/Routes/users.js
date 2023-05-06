@@ -1,11 +1,12 @@
 const express = require("express");
 const router = express();
-const {register, login, logout} = require('../Controllers/users')
+const controller = require('../middleware/users')
+
 
 router
-    .post('/register', register)
-    .post('/login', login)
-    .delete('/logout', logout)
+    .post('/', controller.register)
+    .post('/login', controller.login)
+    // .delete('/logout', logout)
 
 
-module.exports = router
+module.exports = router;
