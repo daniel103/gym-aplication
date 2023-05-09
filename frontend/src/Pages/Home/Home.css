@@ -1,0 +1,30 @@
+.Home-container {
+    /* display: grid;
+    width: 50%;
+    grid-template-columns: repeat(3 ,1fr);
+    row-gap: 10%;
+    column-gap: 2%; */
+    display: grid;
+    width: 40%;
+    grid-template-columns: repeat(2 ,1fr);
+    row-gap: 10%;
+    column-gap: 2%;
+}
+
+
+button {
+    background-color: #f7d794;
+    padding: 10px;
+    border-radius: 5px;
+    
+}
+
+.Home-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 12%;
+    background-color: #95afc0;
+    padding: 5%;
+}

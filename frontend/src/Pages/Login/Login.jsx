@@ -14,7 +14,7 @@ const Login = () => {
   const [user, setUser] = useState(false) 
   const [formValue, setFormValue] = useState({});
 
-  const { register, handleSubmit, formState: { errors }} = useForm()
+  const { register, handleSubmit, formState: { errors }} = useForm();
 
   const handleInputChange = (e) => {
     setFormValue((prev) => ({ ...prev, [e.target.name]: e.target.value }));

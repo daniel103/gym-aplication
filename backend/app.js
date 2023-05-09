@@ -12,7 +12,7 @@ app.use(cookieParser());
 connectDB();
 app.use(express.json());
 
-app.use('/user', require('./Routes/users'))
+app.use('/user', require('./Routes/users'));
 
 // app.get("/",(req, res) => {
 //     res.send("hey")
