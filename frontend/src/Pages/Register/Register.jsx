@@ -1,5 +1,5 @@
 import React from 'react';
-import {useState} from "react"
+import {useState} from "react";
 import "./Register.css";
 import { TextField, Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';

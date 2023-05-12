@@ -3,22 +3,54 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
 import Typography from '@mui/material/Typography';
+import { useNavigate } from 'react-router-dom';
+
 
 const images = [
   {
-    url: '/static/images/buttons/breakfast.jpg',
-    title: 'Breakfast',
-    width: '40%',
+    // url: '/static/images/buttons/breakfast.jpg',
+    title: 'Chest',
+    width: '33%',
   },
   {
-    url: '/static/images/buttons/burgers.jpg',
-    title: 'Burgers',
-    width: '30%',
+    // url: '/static/images/buttons/burgers.jpg',
+    title: 'Stomach',
+    width: '33%',
   },
   {
-    url: '/static/images/buttons/camera.jpg',
-    title: 'Camera',
-    width: '30%',
+    // url: '/static/images/buttons/camera.jpg',
+    title: 'Legs',
+    width: '33%',
+  },
+  {
+    // url: '/static/images/buttons/camera.jpg',
+    title: 'Hands',
+    width: '33%',
+  },
+  {
+    // url: '/static/images/buttons/camera.jpg',
+    title: 'Back',
+    width: '33%',
+  },
+  {
+    // url: '/static/images/buttons/camera.jpg',
+    title: 'Aerobic',
+    width: '33%',
+  },
+  {
+    // url: '/static/images/buttons/camera.jpg',
+    title: 'Tabata',
+    width: '33%',
+  },
+  {
+    // url: '/static/images/buttons/camera.jpg',
+    title: 'Pilates',
+    width: '33%',
+  },
+  {
+    // url: '/static/images/buttons/camera.jpg',
+    title: 'Yoga',
+    width: '33%',
   },
 ];
 
@@ -87,6 +119,12 @@ const ImageMarked = styled('span')(({ theme }) => ({
 }));
 
 export default function AddWorkout() {
+  const navigate = useNavigate();
+
+  const buttonImage = () => {
+    navigate("/trainingexercise")
+  }
+
   return (
     <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%' }}>
       {images.map((image) => (
@@ -96,6 +134,7 @@ export default function AddWorkout() {
           style={{
             width: image.width,
           }}
+          onClick={buttonImage}
         >
           <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
           <ImageBackdrop className="MuiImageBackdrop-root" />

@@ -1,17 +1,19 @@
 import React from 'react';
 import "./Home.css";
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 const Home = () => {
+  const navigate = useNavigate();
+  const linkButton = () => {
+    navigate("/add")
+  }
   return (
     <div className='Home-page'>
       <h1>Home</h1>
       <div className='Home-container'>
-      <button id='workout'>workout</button>
-      <Link to="/add"> 
-      <button id='add'>add</button>
-      </Link>
-      <button id='language'>language</button>    
-      <button id='about'>about</button>
+      <button id='workout' className='Home-btn'>workout</button>
+      <button id='add' className='Home-btn' onClick={linkButton}>add</button>
+      <button id='language' className='Home-btn'>language</button>    
+      <button id='about' className='Home-btn'>about</button>
       </div>
     </div>
   )
